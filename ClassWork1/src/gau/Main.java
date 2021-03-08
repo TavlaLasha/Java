@@ -11,7 +11,7 @@ public class Main {
 //        Exercise4 e4 = new Exercise4();
 //        Exercise5 e5 = new Exercise5();
 //        Exercise6 e6 = new Exercise6();
-//        Exercise7 e7 = new Exercise7();
+        Exercise7 e7 = new Exercise7();
 //        Exercise8 e8 = new Exercise8();
 //        Exercise9 e9 = new Exercise9();
 //        Exercise10 e10 = new Exercise10();
