@@ -27,9 +27,9 @@ public class C {
     }
     public int m4(){
         int sum=0;
-        while(b!=0){
-            sum += b%10;
-            b = b/10;
+        while(c!=0){
+            sum += c%10;
+            c = c/10;
         }
         return sum;
     }
