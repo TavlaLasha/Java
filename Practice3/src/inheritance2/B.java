@@ -1,4 +1,4 @@
-package inheritance;
+package inheritance2;
 
 public class B extends A {
     public B(int x, int y) {
