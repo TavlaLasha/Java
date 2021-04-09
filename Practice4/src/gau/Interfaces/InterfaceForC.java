@@ -1,4 +1,4 @@
-package gau;
+package gau.Interfaces;
 
 public interface InterfaceForC {
     public void printAB();

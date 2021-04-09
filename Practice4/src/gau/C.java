@@ -1,8 +1,10 @@
 package gau;
 
+import gau.Interfaces.InterfaceForC;
+
 import java.util.Scanner;
 
-public class C implements InterfaceForC{
+public class C implements InterfaceForC {
     private int a=10,b=9;
     private char s='#', h='@';
     private Scanner sc;

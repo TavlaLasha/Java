@@ -1,4 +1,4 @@
-package gau;
+package gau.Interfaces;
 
 public interface InterfaceForA {
     public void printHello();
@@ -7,5 +7,5 @@ public interface InterfaceForA {
     public void printABSum();
     public int retABSum();
     public int retABMult();
-    public void printAB();
+    public void changeAB();
 }

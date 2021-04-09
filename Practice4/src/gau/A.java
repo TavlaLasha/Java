@@ -1,6 +1,8 @@
 package gau;
 
-public class A implements InterfaceForA{
+import gau.Interfaces.InterfaceForA;
+
+public class A implements InterfaceForA {
     protected int a=10, b=29;
     @Override
     public void printHello() {
@@ -33,7 +35,7 @@ public class A implements InterfaceForA{
     }
 
     @Override
-    public void printAB() {
+    public void changeAB() {
         a=5;
         b=6;
     }
