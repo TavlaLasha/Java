@@ -6,10 +6,11 @@ import java.io.IOException;
 import java.util.Date;
 
 public class FamilyMember {
-    private String name, lastName, age, status;
+    private String name, lastName, status;
+    private int age;
     protected String addr = "src/gau/Works/FamilyData";
 
-    public FamilyMember(String name, String lastName, String age, String status){
+    public FamilyMember(String name, String lastName, int age, String status){
         this.name = name;
         this.lastName = lastName;
         this.age = age;

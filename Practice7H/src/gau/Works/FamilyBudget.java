@@ -31,7 +31,7 @@ public class FamilyBudget {
     public void saveBudgetState(){
         creteFolder();
         try {
-            FileWriter wrt = new FileWriter(addr+"/budget.txt");
+            FileWriter wrt = new FileWriter(addr+"/budget.txt", true);
             Date date = new Date();
             wrt.write(date.toString() + "--> " + determineBudgetState());
             wrt.close();
