@@ -24,7 +24,7 @@ public class Server extends Thread {
                 clientMessage = (String) objectInputStream.readObject();
                 switch (clientMessage.toLowerCase()){
                     case "bye", "exit", "good bye":
-                        System.exit(0);
+                        System.exit(204);
                         break;
                     case "help":
                         serverMessage = "Sorry I can't for now.";
