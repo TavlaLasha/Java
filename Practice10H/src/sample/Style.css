@@ -1,0 +1,18 @@
+#funcBtn{
+    -fx-background-color: #d3d3d3;
+}
+#numBtn{
+    -fx-background-color: #f2f2f2;
+}
+#mainBtn{
+    -fx-background-color: #4a8cf7;
+    -fx-text-fill: white;
+}
+#funcBtn, #numBtn, #mainBtn{
+    -fx-background-radius: 1px;
+    -fx-font-size: 16px;
+    -fx-border-color: #dfdfdf;
+}
+#cont{
+    -fx-background-color: white;
+}
