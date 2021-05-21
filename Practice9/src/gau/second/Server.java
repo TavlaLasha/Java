@@ -12,7 +12,7 @@ public class Server extends Thread {
     ObjectInputStream objectInputStream;
     String serverMessage, clientMessage;
     ObjectOutputStream objectOutputStream;
-    String[] unknownHelpArr = {"Hmm...", "Sorry could not get it.", "What?", "Sorry did not understand.", "You can ask me these: help, date, name, error."};
+    String[] unknownRequestArr = {"Hmm...", "Sorry could not get it.", "What?", "Sorry did not understand.", "You can ask me these: help, date, name, error."};
 
     public void run(){
         try {
@@ -39,7 +39,7 @@ public class Server extends Thread {
                         serverMessage = "My pleasure!";
                         break;
                     default:
-                        serverMessage = unknownHelpArr[(int)(Math.random()*unknownHelpArr.length)];
+                        serverMessage = unknownRequestArr[(int)(Math.random()*unknownRequestArr.length)];
 
                 }
                 objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
