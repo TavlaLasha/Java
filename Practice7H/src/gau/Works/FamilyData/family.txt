@@ -1,0 +1,4 @@
+Name: Lasha
+LastName: Tavlalashvili
+Age: 20
+Status: Student
