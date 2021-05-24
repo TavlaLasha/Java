@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TextField fx:id="formula" layoutX="53.0" layoutY="95.0" prefHeight="25.0" prefWidth="235.0" />
+      <Button layoutX="341.0" layoutY="95.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+      <TextField fx:id="answer" editable="false" layoutX="53.0" layoutY="175.0" />
+      <Label layoutX="33.0" layoutY="67.0" text="მაგალითი (მხოლოდ მიმატება ან გამოკლება)" />
+      <Label layoutX="63.0" layoutY="150.0" text="პასუხი" />
+   </children>
+</AnchorPane>
