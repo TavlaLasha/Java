@@ -3,15 +3,28 @@ package sample;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.URL;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.ResourceBundle;
 
-public class ViewController {
+public class ViewController extends Controller implements Initializable {
     private String dburl = "jdbc:mysql://localhost:3306/realestate";
+    private Integer selectedId = null;
 
     @FXML
     private TableView<Estate> viewTable = new TableView<>();
@@ -65,6 +78,8 @@ public class ViewController {
                 viewTable.getColumns().add(column);
             }
             viewTable.setItems(dbData);
+
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -78,8 +93,8 @@ public class ViewController {
             estate.country.set(resultSet.getString("country"));
             estate.street.set(resultSet.getString("street"));
             estate.type.set(resultSet.getString("type"));
-            estate.rooms.set(resultSet.getInt("rooms"));
-            estate.price.set(resultSet.getDouble("price"));
+            estate.rooms.set(resultSet.getFloat("rooms"));
+            estate.price.set(resultSet.getString("price"));
             estate.email.set(resultSet.getBoolean("email"));
             estate.mobile.set(resultSet.getBoolean("mobile"));
             estate.description.set(resultSet.getString("description"));
@@ -87,4 +102,17 @@ public class ViewController {
         }
         return data;
     }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setSelectedId(selectedId);
+        viewTable.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null) {
+                selectedId = null;
+                return;
+            }
+            selectedId = newValue.id.get();
+            setSelectedId(selectedId);
+        });
+    }
+
 }

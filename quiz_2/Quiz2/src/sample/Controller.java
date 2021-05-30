@@ -1,13 +1,16 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller extends Thread {
+public class Controller implements Initializable {
     String en = "abcdefghijklmnopqrstuvwxyz";
     String ge = "აბგდევზთიკლმნოპჟრსტუფღყშცძწხჯჰ";
     protected String addr = "src/sample/Files";
@@ -22,12 +25,15 @@ public class Controller extends Thread {
     private TextArea textArea;
     private StringBuilder text;
 
-    public void run(){
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         langCombo.getItems().addAll("EN", "GE");
+        langCombo.getSelectionModel().select("EN");
         SpinnerValueFactory<Integer> valueFactory = //
                 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 2);
 
         wordsA.setValueFactory(valueFactory);
+        symbsA.setValueFactory(valueFactory);
     }
 
     @FXML
