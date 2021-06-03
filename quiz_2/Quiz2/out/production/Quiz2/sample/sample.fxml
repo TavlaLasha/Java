@@ -5,7 +5,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="373.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ComboBox fx:id="langCombo" editable="true" layoutX="48.0" layoutY="69.0" prefHeight="25.0" prefWidth="79.0" />
+      <ComboBox fx:id="langCombo" layoutX="48.0" layoutY="69.0" prefHeight="25.0" prefWidth="79.0" />
       <Label layoutX="62.0" layoutY="43.0" text="Language" />
       <Label layoutX="165.0" layoutY="43.0" text="Words" />
       <Label layoutX="243.0" layoutY="43.0" text="Symbols In Words" />
